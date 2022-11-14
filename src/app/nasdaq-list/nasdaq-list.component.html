@@ -1,0 +1,12 @@
+<p>nasdaq-list works!</p>
+
+<input type="text" placeholder="Search" (keyup)="search($event)">
+
+
+<table>
+  <tr><td><h2>NASDAQ STOCKS</h2></td></tr>
+  <tr *ngFor="let item of results$ | async">
+    <td>{{item.Symbol}}</td>
+    <td>{{item.Name}}</td>
+  </tr>
+</table>
